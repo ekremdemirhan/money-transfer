@@ -3,13 +3,12 @@ package com.example.moneytransfer.datasource;
 import com.example.moneytransfer.model.User;
 
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class UserDataSource {
 
     private static UserDataSource ourInstance = new UserDataSource();
-    private Map<String, User> userMap;
+    private ConcurrentHashMap<String, User> userMap;
 
     public static UserDataSource getInstance() {
         return ourInstance;
@@ -22,7 +21,7 @@ public class UserDataSource {
 
     private void start() {
 
-        userMap = new HashMap<>();
+        userMap = new ConcurrentHashMap<>();
     }
 
     public User addUser(User user) {
