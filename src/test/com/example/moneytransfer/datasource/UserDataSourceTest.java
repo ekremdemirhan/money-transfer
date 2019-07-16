@@ -29,6 +29,7 @@ public class UserDataSourceTest {
         User firstUser = UserDataSource.getInstance().getAllUsers().iterator().next();
         
         assertNotNull(firstUser, "A user should be on the list.");
+        assertEquals(addedUser.getId(), firstUser.getId(), "ID's should be matched.");
         assertEquals(addedUser.balance(), firstUser.balance(), "User's cash amount should be correct.");
     }
 
