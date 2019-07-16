@@ -1,10 +1,23 @@
 package com.example.moneytransfer;
 
-import spark.Spark;
+import com.example.moneytransfer.application.UserManagement;
+import com.example.moneytransfer.integration.MoneyTransferController;
 
 public class MoneyTransfer {
 
     public static void main(String[] args) {
-        Spark.get("/hello", (req, res) -> "Hellooooo!");
+
+        initDataManagement();
+        initApp();
+    }
+
+    private static void initDataManagement() {
+
+        UserManagement.getInstance();
+    }
+
+    private static void initApp() {
+
+        MoneyTransferController.start();
     }
 }
