@@ -1,7 +1,7 @@
 package com.example.moneytransfer.model;
 
-class InvalidAmountOfMoneyException extends RuntimeException {
-    InvalidAmountOfMoneyException(String s) {
+public class InvalidAmountOfMoneyException extends RuntimeException {
+    public InvalidAmountOfMoneyException(String s) {
         super(s);
     }
 }

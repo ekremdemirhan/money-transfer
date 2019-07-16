@@ -1,7 +1,7 @@
 package com.example.moneytransfer.model;
 
-class UserOutOfMoneyException extends RuntimeException {
-    UserOutOfMoneyException(String s) {
+public class UserOutOfMoneyException extends RuntimeException {
+    public UserOutOfMoneyException(String s) {
         super(s);
     }
 }
