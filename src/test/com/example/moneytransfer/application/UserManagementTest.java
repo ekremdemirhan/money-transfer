@@ -20,6 +20,17 @@ class UserManagementTest {
     }
 
     @Test
+    void when_MoneyIsSent_Expect_UserMoneyBalanceUpdated() {
+
+        User user = UserManagement.getInstance().addUserWithCashAmount(100);
+        user.getMoney(100);
+
+        User userById = UserManagement.getInstance().getUserById(user.getId());
+
+        assertEquals(200, userById.balance(), "User's balance should be correct.");
+    }
+
+    @Test
     void when_RequestingListOfUsers_Expect_ListShouldBeReturnedSuccessfully() {
 
         User addedUser = UserManagement.getInstance().addUserWithCashAmount(100);
