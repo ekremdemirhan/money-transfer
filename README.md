@@ -7,6 +7,7 @@ be run on **localhost:4567**. Alternatively, with an IDE, application is easily 
 when running **MoneyTransfer** class.
 
 ###ENDPOINTS
+
 `(GET) /users` returns all registered users.
 
 `(GET) /users/:id` returns the user with the given ID.
