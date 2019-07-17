@@ -2,6 +2,7 @@
 Money Transfer is a simple project that demonstrates money transactions between users.
 
 ###HOW TO RUN
+
 Creating a jar of the project and run it on terminal should be enough. The rest service will
 be run on **localhost:4567**. Alternatively, with an IDE, application is easily built and run 
 when running **MoneyTransfer** class.
